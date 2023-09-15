@@ -10,7 +10,7 @@ publishing {
     publications {
         register<MavenPublication>(releaseVariant) {
             groupId = "com.susumunoda"
-            artifactId = "android-firebase"
+            artifactId = "android-firebase-firestore"
             version = "1.0"
 
             afterEvaluate {

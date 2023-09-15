@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Android Firebase"
+rootProject.name = "Android Firebase Firestore"
 include(":app")
 include(":library")

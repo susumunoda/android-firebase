@@ -1,4 +1,4 @@
-package com.susumunoda.android.firebase
+package com.susumunoda.android.firebase.firestore
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.susumunoda.android.firebase.ui.theme.AndroidFirebaseTheme
+import com.susumunoda.android.firebase.firestore.ui.theme.AndroidFirebaseTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

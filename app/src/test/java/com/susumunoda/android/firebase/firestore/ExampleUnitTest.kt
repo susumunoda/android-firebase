@@ -1,4 +1,4 @@
-package com.susumunoda.android.firebase
+package com.susumunoda.android.firebase.firestore
 
 import org.junit.Test
 

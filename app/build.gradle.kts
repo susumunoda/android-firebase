@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.susumunoda.android.firebase"
+    namespace = "com.susumunoda.android.firebase.firestore"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.susumunoda.android.firebase"
+        applicationId = "com.susumunoda.android.firebase.firestore"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

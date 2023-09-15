@@ -1,4 +1,4 @@
-package com.susumunoda.android.firebase.ui.theme
+package com.susumunoda.android.firebase.firestore.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

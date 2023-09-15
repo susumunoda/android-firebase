@@ -21,7 +21,7 @@ publishing {
 }
 
 android {
-    namespace = "com.susumunoda.android.firebase"
+    namespace = "com.susumunoda.android.firebase.firestore"
     compileSdk = 34
 
     defaultConfig {

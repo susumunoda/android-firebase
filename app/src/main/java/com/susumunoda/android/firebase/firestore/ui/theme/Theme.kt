@@ -1,4 +1,4 @@
-package com.susumunoda.android.firebase.ui.theme
+package com.susumunoda.android.firebase.firestore.ui.theme
 
 import android.app.Activity
 import android.os.Build

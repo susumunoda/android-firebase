@@ -2,6 +2,22 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinAndroid)
+    `maven-publish`
+}
+
+val releaseVariant = "release"
+publishing {
+    publications {
+        register<MavenPublication>(releaseVariant) {
+            groupId = "com.susumunoda"
+            artifactId = "android-firebase"
+            version = "1.0"
+
+            afterEvaluate {
+                from(components[releaseVariant])
+            }
+        }
+    }
 }
 
 android {
@@ -30,6 +46,12 @@ android {
     }
     kotlinOptions {
         jvmTarget = "17"
+    }
+    publishing {
+        singleVariant(releaseVariant) {
+            withSourcesJar()
+            withJavadocJar()
+        }
     }
 }
 

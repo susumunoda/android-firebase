@@ -1,5 +1,7 @@
 package com.susumunoda.android.firebase.firestore
 
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.Filter
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.QuerySnapshot
@@ -15,7 +17,7 @@ import kotlin.coroutines.suspendCoroutine
 class FirestoreServiceImpl : FirestoreService {
     private val db = Firebase.firestore
 
-    override suspend fun getDocument(path: String, id: String) =
+    override suspend fun getDocument(path: String, id: String): DocumentSnapshot =
         suspendCoroutine { cont ->
             db.collection(path)
                 .document(id)
@@ -24,11 +26,11 @@ class FirestoreServiceImpl : FirestoreService {
                 .addOnFailureListener { cont.resumeWithException(it) }
         }
 
-    override suspend fun addDocument(path: String, value: Any) =
+    override suspend fun addDocument(path: String, value: Any): DocumentReference =
         suspendCoroutine { cont ->
             db.collection(path)
                 .add(value)
-                .addOnSuccessListener { cont.resume(Unit) }
+                .addOnSuccessListener { cont.resume(it) }
                 .addOnFailureListener { cont.resumeWithException(it) }
         }
 
